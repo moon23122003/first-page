@@ -20,7 +20,7 @@ st.markdown("""
 
 # Sidebar navigation
 menu = ["Home", "sign up"]
-choice = st.sidebar.selectbox("Navigation", menu)
+page = st.sidebar.selectbox("Navigation", menu)
 
 # ---------------- HOME ----------------
 if page == "Home":
