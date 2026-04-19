@@ -26,19 +26,19 @@ st.markdown("""
 st.markdown('<p class="title">Smart Diagnosis System 🩺</p>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">Get instant health predictions based on symptoms</p>', unsafe_allow_html=True)
 
-col1, col2, col3 = st.columns(3)
+#-----------------navigation------------
 
-with col1:
-    st.info("💡 Easy to use")
+st.sidebar.title("Navigation")
+menu = st.sidebar.radio("Go to", ["Home", "Diagnosis", "About"])
 
-with col2:
-    st.success("⚡ Fast Results")
+if menu == "Home":
+    st.title("🏠 Home Page")
 
-with col3:
-    st.warning("🔒 Secure Data")
+elif menu == "sign up":
+    st.title("🩺 sign up")
 
-st.button("Start Diagnosis")
-
+elif menu == "About":
+    st.title("ℹ️ About Page")
 # ---------------- HOME ----------------
 if page == "Home":
     st.title(" welcome to smart diagnosis system ")
@@ -64,3 +64,9 @@ gender=st.selectbox("GENDER",["M","F","OTHER"])
 b1=st.button("SIGNUP")
 st.snow()
 
+#----------------about----------------
+
+import streamlit as st
+
+st.title("about us")
+st.markdown("""here we are to diagnosis in proper way . so the**'color:red' [user can't feel uneasy and also easy to use for any ahe of people]**""")
