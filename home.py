@@ -1,27 +1,20 @@
 import streamlit as st
 import time
 
-# Custom CSS for better UI
-st.markdown("""
-<style>
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    background-color: #4CAF50;
-    padding: 10px;
-}
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-</style>
+# Create horizontal navbar
+col1, col2 = st.columns(2)
 
-<div class="navbar">
-    <a href="#">Home</a>
-    <a href="#">Sign Up</a>
-</div>
-""", unsafe_allow_html=True)
+with col1:
+    if st.button("🏠 Home"):
+        st.session_state.page = "Home"
+
+with col2:
+    if st.button("📝 Sign Up"):
+        st.session_state.page = "SignUp"
+
+# Default page
+if "page" not in st.session_state:
+    st.session_state.page = "Home"
 
 # Sidebar navigation
 menu = ["Home", "sign up"]
