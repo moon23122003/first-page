@@ -26,7 +26,7 @@ page = st.sidebar.radio("Navigation", ["Home", "Loading", "Wait"])
 
 # ---------------- HOME ----------------
 if page == "Home":
-    st.title("🚀 Welcome to My Professional Page")
+    st.title(" welcome to smart diagnosis system ")
 
     name = st.text_input("Enter your name")
 
@@ -36,24 +36,16 @@ if page == "Home":
         else:
             st.warning("Please enter your name")
 
-# ---------------- LOADING ----------------
-elif page == "Loading":
-    st.title("⏳ Loading Demo")
+# ---------------- SIGN UP ----------------
+elif page == "sign up":
+   import streamlit as st
+st.link_button("https://www.hfmmagazine.com/sites/default/files/hfmmagazine/ext/resources/images/2016/October/1116_upfront_microhospital_BSW.jpg")
+st.title("SingUp")
+name=st.text_input("USER NAME")
+password=st.text_input("PASSWORD")
+email=st.text_input("Email Id")
+age=st.selectbox("Age",1,100)
+gender=st.selectbox("GENDER",["M","F","OTHER"])
+b1=st.button("SIGNUP")
+st.snow()
 
-    if st.button("Start Loading"):
-        with st.spinner("Loading... please wait"):
-            time.sleep(3)
-        st.success("Done! ✅")
-
-# ---------------- WAIT ----------------
-elif page == "Wait":
-    st.title("📊 Processing Demo")
-
-    if st.button("Run Process"):
-        progress = st.progress(0)
-
-        for i in range(100):
-            time.sleep(0.02)
-            progress.progress(i + 1)
-
-        st.success("Process completed 🎉")
