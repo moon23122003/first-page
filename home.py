@@ -32,13 +32,13 @@ st.sidebar.title("Navigation")
 menu = st.sidebar.radio("Go to", ["Home", "Diagnosis", "About"])
 
 if menu == "Home":
-    st.title("🏠 Home Page")
+    st.title("🏠 Home")
 
 elif menu == "sign up":
     st.title("🩺 sign up")
 
 elif menu == "About":
-    st.title("ℹ️ About Page")
+    st.title("ℹ️ about us")
 # ---------------- HOME ----------------
 if page == "Home":
     st.title(" welcome to smart diagnosis system ")
