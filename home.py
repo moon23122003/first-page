@@ -22,7 +22,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Sidebar navigation
-page = st.sidebar.radio("Navigation", ["Home", "Loading", "Wait"])
+page = st.sidebar.radio("Navigation", ["Home", "sign up"])
 
 # ---------------- HOME ----------------
 if page == "Home":
