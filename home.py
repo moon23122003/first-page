@@ -1,47 +1,43 @@
 import streamlit as st
 import time
+import streamlit as st
 
-st.set_page_config(page_title="Smart Diagnosis", page_icon="🏥", layout="wide")
+st.set_page_config(page_title="Smart Diagnosis System", layout="wide")
 
-st.markdown(
-    """
+st.markdown("""
     <style>
-    .stApp {
-        background: linear-gradient(135deg, #e0f7fa, #ffffff, #e8f5e9);
+    .main {
+        background-color: #f5f7fa;
     }
-    .hero {
-        background: rgba(255, 255, 255, 0.75);
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-        text-align: center;
-        margin-top: 30px;
+    .title {
+        font-size:40px;
+        color:#2c3e50;
+        text-align:center;
+        font-weight:bold;
     }
-    .hero h1 {
-        color: #0f4c75;
-        font-size: 48px;
-        margin-bottom: 10px;
-    }
-    .hero p {
-        color: #333333;
-        font-size: 20px;
-    }
-    .feature-box {
-        background: white;
-        padding: 25px;
-        border-radius: 18px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-        text-align: center;
-        margin-top: 20px;
+    .subtitle {
+        font-size:20px;
+        text-align:center;
+        color:gray;
     }
     </style>
-    """,
-    unsafe_allow_html=True,
-)
+""", unsafe_allow_html=True)
 
-# Sidebar navigation
-menu = ["Home", "sign up"]
-page = st.sidebar.selectbox("Navigation", menu)
+st.markdown('<p class="title">Smart Diagnosis System 🩺</p>', unsafe_allow_html=True)
+st.markdown('<p class="subtitle">Get instant health predictions based on symptoms</p>', unsafe_allow_html=True)
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.info("💡 Easy to use")
+
+with col2:
+    st.success("⚡ Fast Results")
+
+with col3:
+    st.warning("🔒 Secure Data")
+
+st.button("Start Diagnosis")
 
 # ---------------- HOME ----------------
 if page == "Home":
