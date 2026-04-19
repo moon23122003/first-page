@@ -19,7 +19,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Sidebar navigation
-page = st.sidebar.radio("Navigation", ["Home", "sign up"])
+menu = ["Home", "sign up"]
+choice = st.sidebar.selectbox("Navigation", menu)
 
 # ---------------- HOME ----------------
 if page == "Home":
