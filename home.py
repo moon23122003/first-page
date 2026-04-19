@@ -1,20 +1,43 @@
 import streamlit as st
 import time
 
-# Create horizontal navbar
-col1, col2 = st.columns(2)
+st.set_page_config(page_title="Smart Diagnosis", page_icon="🏥", layout="wide")
 
-with col1:
-    if st.button("🏠 Home"):
-        st.session_state.page = "Home"
-
-with col2:
-    if st.button("📝 Sign Up"):
-        st.session_state.page = "SignUp"
-
-# Default page
-if "page" not in st.session_state:
-    st.session_state.page = "Home"
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: linear-gradient(135deg, #e0f7fa, #ffffff, #e8f5e9);
+    }
+    .hero {
+        background: rgba(255, 255, 255, 0.75);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        text-align: center;
+        margin-top: 30px;
+    }
+    .hero h1 {
+        color: #0f4c75;
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+    .hero p {
+        color: #333333;
+        font-size: 20px;
+    }
+    .feature-box {
+        background: white;
+        padding: 25px;
+        border-radius: 18px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        text-align: center;
+        margin-top: 20px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 # Sidebar navigation
 menu = ["Home", "sign up"]
