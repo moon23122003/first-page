@@ -3,19 +3,24 @@ import time
 
 # Custom CSS for better UI
 st.markdown("""
-    <style>
-    .main {
-        text-align: center;
-    }
-    .stButton>button {
-        background-color: #4CAF50;
-        color: white;
-        border-radius: 10px;
-        height: 3em;
-        width: 10em;
-        font-size: 16px;
-    }
-    </style>
+<style>
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #4CAF50;
+    padding: 10px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+</style>
+
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Sign Up</a>
+</div>
 """, unsafe_allow_html=True)
 
 # Sidebar navigation
