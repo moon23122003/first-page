@@ -27,9 +27,9 @@ st.markdown('<p class="title">Smart Diagnosis System 🩺</p>', unsafe_allow_htm
 st.markdown('<p class="subtitle">Get instant health predictions based on symptoms</p>', unsafe_allow_html=True)
 
 #-----------------navigation------------
-
-st.sidebar.title("Navigation")
-menu = st.sidebar.radio("Go to", ["Home", "Diagnosis", "About"])
+# Sidebar menu
+menu = st.sidebar.selectbox("Choose menu", ["Home", "Loading", "Wait"])
+#-----------------home---------------
 
 if menu == "Home":
     st.title("🏠 Home")
