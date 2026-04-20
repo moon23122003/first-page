@@ -40,7 +40,7 @@ elif menu == "sign up":
 elif menu == "About":
     st.title("ℹ️ about us")
 # ---------------- HOME ----------------
-if page == "Home":
+if menu == "Home":
     st.title(" welcome to smart diagnosis system ")
 
     name = st.text_input("Enter your name")
@@ -52,7 +52,7 @@ if page == "Home":
             st.warning("Please enter your name")
 
 # ---------------- SIGN UP ----------------
-elif page == "sign up":
+elif menu == "sign up":
    import streamlit as st
 st.link_button("go to screenshot","hospital")
 st.title("SingUp")
