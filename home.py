@@ -54,7 +54,7 @@ if menu == "Home":
 # ---------------- SIGN UP ----------------
 elif menu == "sign up":
    import streamlit as st
-st.image("hospital.avif")
+st.image("hospital")
 st.title("SingUp")
 name=st.text_input("USER NAME")
 password=st.text_input("PASSWORD")
