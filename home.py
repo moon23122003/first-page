@@ -28,7 +28,7 @@ st.markdown('<p class="subtitle">Get instant health predictions based on symptom
 
 #-----------------navigation------------
 # Sidebar menu
-menu = st.sidebar.selectbox("Choose menu", ["Home", "Loading", "Wait"])
+menu = st.sidebar.selectbox("Choose menu", ["Home", "sign up","about us"])
 #-----------------home---------------
 
 if menu == "Home":
@@ -61,7 +61,8 @@ email=st.text_input("Email Id")
 age=st.slider("Age",1,100)
 gender=st.selectbox("GENDER",["M","F","OTHER"])
 b1=st.button("SIGNUP")
-st.snow()
+with st.sidebar:
+       st.write("Show the above options")
 
 #----------------about----------------
 
