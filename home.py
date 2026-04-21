@@ -29,16 +29,7 @@ st.markdown('<p class="subtitle">Get instant health predictions based on symptom
 #-----------------navigation------------
 # Sidebar menu
 menu = st.sidebar.selectbox("Choose menu", ["Home", "sign up","about us"])
-#-----------------home---------------
 
-if menu == "Home":
-    st.title("🏠 Home")
-
-elif menu == "sign up":
-    st.title("🩺 sign up")
-
-elif menu == "About":
-    st.title("ℹ️ about us")
 # ---------------- HOME ----------------
 if menu == "Home":
     st.title(" welcome to smart diagnosis system ")
