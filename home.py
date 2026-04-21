@@ -42,19 +42,6 @@ if menu == "Home":
         else:
             st.warning("Please enter your name")
 
-# ---------------- SIGN UP ----------------
-elif menu == "sign up":
-   import streamlit as st
-st.title("SingUp")
-name=st.text_input("USER NAME")
-password=st.text_input("PASSWORD")
-email=st.text_input("Email Id")
-age=st.slider("Age",1,100)
-gender=st.selectbox("GENDER",["M","F","OTHER"])
-b1=st.button("SIGNUP")
-with st.sidebar:
-       st.write("Show the above options")
-
 #----------------about----------------
 
 import streamlit as st
